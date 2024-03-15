@@ -87,3 +87,16 @@ function getCapitale($num)
         echo "Vide";
     }
 }
+
+function getCity($num)
+{ if (!empty($num)) {
+    global $pdo;
+    $query = 'SELECT Name FROM City WHERE idCountry = :num';
+    $prep = $pdo->prepare($query);
+    $prep->bindValue(':num',$num, PDO::PARAM_STR);
+    $prep->execute();
+    return $prep->fetch()->Name;
+    } else {
+        echo "Vide";
+    }
+}

@@ -67,11 +67,15 @@
           <div class="dropdown-menu" aria-labelledby="dropdown01">
 
             <?php $continent = getContinent(); ?>
+            <?php $pays = getCountriesByContinent($continent); ?>
 
             <?php foreach($continent as $lecontinent){ ?>
                 <a class="dropdown-item" href="index.php?continent=<?php echo $lecontinent->Continent ?>"><?php echo $lecontinent->Continent ?></a>
               <?php } ?>
 
+            <?php foreach($continent as $lecontinent){ ?>
+                <a class="dropdown-item" href="index.php?continent=<?php echo $lecontinent->Continent ?>"><?php echo $lecontinent->Continent ?></a>
+              <?php } ?>
 
           </div>
         </li>

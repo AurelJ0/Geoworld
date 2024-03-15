@@ -17,10 +17,10 @@
 
 <?php  require_once 'header.php'; ?>
 
+
 <main role="main" class="flex-shrink-0">
 
 <?php 
-
 
 if(isset($_GET['continent'])){
   $continent = $_GET['continent'];
@@ -91,15 +91,6 @@ $continentFR = "";
           </tr>
         <?php } ?>
      </table>
-    </div>
-    <p>
-        <code>
-      <?php
-        var_dump($desPays[0]);
-        ?>
-        </code>
-    </p>
-  </div>
 </main>
 
 <?php
